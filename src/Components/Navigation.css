@@ -1,0 +1,183 @@
+.nav-container {
+    width: 100%;
+    height: 10vh;
+    background: linear-gradient(to right top, #ef42f5, #9042f5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-search-container {
+    width: 33.3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search_icon {
+    display: inline-block;
+    height: 2.5vh;
+}
+.nav-search-container input {
+    border: none;
+    font-size: 3vh;
+    height: 5vh;
+    outline: none;
+    padding: 1vh;
+    border-top-left-radius: 1vh;
+    border-bottom-left-radius: 1vh;
+    border-right: solid 1px black;
+    background-color: white;
+}
+@media only screen and (max-width: 1000px) {
+    .nav-container {
+        height: 5vh;
+    }
+    .nav-search-container input {
+        font-size: 1vh;
+        height: 3vh;
+    }
+    .nav-search-container button {
+        height: 3vh;
+        padding: 0.5vh;
+    }
+}
+.nav-search-container button {
+    height: 5vh;
+    border: none;
+    padding: 1vh;
+    border-top-right-radius: 1vh;
+    border-bottom-right-radius: 1vh;
+    outline: none;
+    background: black;
+    color: white;
+    transition: 0.2s;
+    stroke: white;
+}
+.nav-search-container button:hover {
+    background: yellow;
+    transition: 0.2s;
+    color: black;
+    transform: translateY(-0.4vh);
+    cursor: pointer;
+
+    stroke: black;
+}
+.nav-search-container button:active {
+    transform: translateY(0.0vh);
+}
+.nav-right-container {
+    display: flex;
+    justify-content: center;
+    width: 33.3%;
+    padding-left: 10vh;
+    padding-right: 10vh;
+}
+.shopping-cart-icon {
+    display: inline-block;
+    height: 4vh;
+
+    fill: black;
+    transition: height 0.1s, fill 0.1s linear;
+}
+.shopping-cart-icon:hover {
+    fill: yellow;
+    transition: height 0.1s, fill 0.1s linear;
+
+    height: 4.7vh;
+
+    cursor: pointer;
+}
+.shopping-cart-icon:active {
+    height: 4.4vh;
+}
+.nav-left-container {
+    width: 33.3%;
+}
+.icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1vh;
+}
+.account-icon {
+    display: inline-block;
+    height: 4vh;
+
+    fill: black;
+    transition: height, fill 0.1s linear;
+
+    overflow: hidden;
+}
+.account-icon:hover {
+    fill: yellow;
+    transition: height 0.1s, fill 0.1s linear;
+
+    height: 4.7vh;
+
+    cursor: pointer;
+}
+.account-icon:active {
+    height: 4.4vh;
+}
+.sliding-text {
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.show {
+    animation: slideInRight 0.3s forwards;
+}
+.hide {
+    animation: slideInLeft 0.3s forwards;
+}
+@keyframes slideInRight {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    50% {
+        pointer-events: none;
+    }
+
+    100% {
+        transform: translateX(10%);
+        opacity: 1;
+        pointer-events: all;
+    }
+}
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(10%);
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    50% {
+        pointer-events: none;
+    }
+
+    100% {
+        transform: translateX(-100%);
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+.account-text-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 10vh;
+}
+.account-text-container a {
+    outline: none;
+    text-decoration: none;
+    color: black;
+    transition: color, font-size 0.1s;
+    font-size: 2.1vh;
+}
+.account-text-container a:hover {
+    color: yellow;
+    transition: color, font-size 0.1s;
+    font-size: 2.4vh;
+}
