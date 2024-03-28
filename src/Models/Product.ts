@@ -8,4 +8,5 @@ export default class Product {
     public type:string = "";
     public keywords:string[] = [];
     public imageData:string = "";
+    public slug:string = "";
 }
