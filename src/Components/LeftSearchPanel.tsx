@@ -10,7 +10,7 @@ export default function LeftSearchPanel({category, setCategory}:props) {
     return (
         <div className="left-search-panel-container">
             <div className="search-title-container">
-                <h3>Categories</h3>
+                <h3 onClick={() => getProductsByCategory(0)}>Categories</h3>
             </div>
             <div className="search-content-container">
                 <h4 onClick={() => getProductsByCategory(1)}>Apparel</h4>

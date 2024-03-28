@@ -5,11 +5,6 @@ import "./Home.css"
 import LeftSearchPanel from "./LeftSearchPanel";
 import HomeProductItem from "./HomeProductItem";
 
-// interface props {
-//     products:Product[] | null
-//     searchPanel:JSX.Element
-// }
-
 export default function Home() {
     const [prodCategory, setProdCategory] = useState(0);
     const [products, setProducts] = useState<Product[]|null>(null);
@@ -30,24 +25,27 @@ export default function Home() {
         }
 
         return (
-            <div style={{display: "flex", flexDirection: "row"}}>
+            <div className="home-main-container">
                 <LeftSearchPanel category={prodCategory} setCategory={setProdCategory} />
-                {products.map((product) =>
-                    <HomeProductItem product={product} />
-                )}
+                <div className="home-product-list-container">
+                    {products.map(product => {
+                            return <HomeProductItem product={product}/>
+                        }
+                    )}
+                </div>
             </div>
         );
     }
 
     return (
-        <div>
+        <div style={{display:"flex", flexDirection:"row"}}>
             <LeftSearchPanel category={prodCategory} setCategory={setProdCategory} />
             Failed to load...
         </div>
     );
 
     async function updateProducts(prodCategory:number) {
-        const url = `http://${config.serverIp}:${config.serverPort}/products/byType?category=${prodCategory}`;
+        const url = `http://${config.serverIp}:${config.serverPort}/products/byCategory?id=${prodCategory}`;
         const options = {
             method: 'GET',
             headers: {

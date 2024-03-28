@@ -1,0 +1,10 @@
+.home-main-container {
+    display: flex;
+    flex-direction: row;
+}
+.home-product-list-container {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    width: inherit;
+}

@@ -21,11 +21,11 @@
     text-decoration: none;
     transition: border-bottom 0.1s ease; /* Применяем переход для свойства border-bottom */
     border-bottom: 1px solid transparent;
-    height: 4vh
+    height: 4vh;
 }
 .search-title-container h3:hover {
     border-bottom: 3px solid black;
-    cursor: default;
+    cursor: pointer;
 }
 .search-content-container {
     padding-left: 3vh;
