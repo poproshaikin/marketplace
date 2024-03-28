@@ -1,0 +1,43 @@
+.left-search-panel-container {
+    background: linear-gradient(#f7ff00, #99ff00);
+    height: 50vh;
+    width: 30vh;
+    border-top: 0.3vh solid black;
+    border-right: 0.3vh solid black;
+    border-bottom: 0.3vh solid black;
+    border-top-right-radius: 1vh;
+    border-bottom-right-radius: 1vh;
+    padding-top: 1vh;
+    margin-right: 3vh;
+}
+.search-title-container {
+    display: flex;
+    align-items: center;
+    padding-left: 1vh;
+    flex-direction: column;
+}
+.search-title-container h3 {
+    width: max-content;
+    text-decoration: none;
+    transition: border-bottom 0.1s ease; /* Применяем переход для свойства border-bottom */
+    border-bottom: 1px solid transparent;
+    height: 4vh
+}
+.search-title-container h3:hover {
+    border-bottom: 3px solid black;
+    cursor: default;
+}
+.search-content-container {
+    padding-left: 3vh;
+    padding-top: 3vh;
+}
+.search-content-container h4 {
+    height: 3.5vh;
+    transition: border-bottom 0.1s ease; /* Применяем переход для свойства border-bottom */
+    border-bottom: 1px solid transparent;
+    width: max-content;
+}
+.search-content-container h4:hover {
+    border-bottom: 3px solid black;
+    cursor: pointer;
+}

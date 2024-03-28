@@ -135,6 +135,10 @@
         pointer-events: none;
     }
 
+    20% {
+        opacity: 0;
+    }
+
     50% {
         pointer-events: none;
     }
@@ -154,6 +158,10 @@
 
     50% {
         pointer-events: none;
+    }
+
+    60% {
+        opacity: 0;
     }
 
     100% {
